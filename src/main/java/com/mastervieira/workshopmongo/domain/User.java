@@ -3,10 +3,15 @@ package com.mastervieira.workshopmongo.domain;
 import java.io.Serializable;
 import java.util.Objects;
 
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+
+@Document //declarar a coleçao na base dados MongoDB
 public class User implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
-	
+	@Id // defenir achave de procura
 	private String id;
 	private String name;
 	private String email;
